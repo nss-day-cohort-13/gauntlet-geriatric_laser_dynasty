@@ -1,5 +1,5 @@
 /*
-  TODO: Modularize this code with IIFE or Browserify
+  Modularize this code with IIFE or Browserify
  */
 var Gauntlet = Gauntlet || {};
 Gauntlet.Combatants = {};
@@ -8,6 +8,13 @@ Gauntlet.Combatants = {};
   Define the base object for any player of Gauntlet,
   whether a human player or a monster.
  */
+
+function playerInfoDiv(info) {
+  // console.log("this is your friendly neighborhood playerInfoDiv", Gauntlet.myPlayer.health);
+  $('#playerName').html(Gauntlet.myPlayer.health);
+  // $('#playerHealth').html(Gauntlet.Combatants.Player.health);
+}
+
 Gauntlet.Combatants.Player = function(name, playerClass) {
   this.species = null;
   this.class = playerClass;
@@ -43,10 +50,10 @@ Gauntlet.Combatants.Player = function(name, playerClass) {
 console.log('player', Gauntlet.Combatants.Player);
 $('#class-select').click(function (e) {
   var newClass = event.target.innerText;
-  var myPlayer = new Gauntlet.Combatants.Player('name', newClass);
+  Gauntlet.myPlayer = new Gauntlet.Combatants.Player('name', newClass);
   console.log('just the var', newClass);
-  console.log('myPlayer', myPlayer);
-  console.log('myPlayer.class', myPlayer.class);
+  console.log('myPlayer', Gauntlet.myPlayer);
+  console.log('myPlayer.class', Gauntlet.myPlayer.class);
 });
 Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
   this.weapon = newWeapon;
@@ -68,7 +75,7 @@ Gauntlet.Combatants.Player.prototype.generateClass = function() {
 };
 
 /*
-  Define the base properties for a human in a 
+  Define the base properties for a human in a
   constructor function.
  */
 Gauntlet.Combatants.Human = function() {
@@ -87,7 +94,7 @@ Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
 
 
 /*
-  Define the base properties for a monster in a 
+  Define the base properties for a monster in a
   constructor function.
  */
 Gauntlet.Combatants.Monster = function() {
