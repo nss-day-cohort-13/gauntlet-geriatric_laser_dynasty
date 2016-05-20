@@ -11,7 +11,10 @@ Gauntlet.Combatants = {};
 
 function playerInfoDiv(info) {
   // console.log("this is your friendly neighborhood playerInfoDiv", Gauntlet.myPlayer.health);
-  $('#playerName').html(Gauntlet.myPlayer.health);
+  $('#playerName').html(Gauntlet.myPlayer.playerName);
+  $('#playerHealth').html(Gauntlet.myPlayer.health);
+  $('#playerRace').html("Human");
+  $('#playerClass').html(Gauntlet.myPlayer.class);
   // $('#playerHealth').html(Gauntlet.Combatants.Player.health);
 }
 
