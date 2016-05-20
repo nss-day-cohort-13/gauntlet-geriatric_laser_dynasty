@@ -8,9 +8,9 @@ Gauntlet.Combatants = {};
   Define the base object for any player of Gauntlet,
   whether a human player or a monster.
  */
-Gauntlet.Combatants.Player = function(name) {
+Gauntlet.Combatants.Player = function(name, playerClass) {
   this.species = null;
-  this.class = null;
+  this.class = playerClass;
   this.weapon = null;
 
   this.playerName = name || "unknown adventurer";
@@ -36,10 +36,18 @@ Gauntlet.Combatants.Player = function(name) {
       this.weapon.toString(),
       "!"
     ].join("");
+    console.log('the output', output);
     return output;
   };
 };
-
+console.log('player', Gauntlet.Combatants.Player);
+$('#class-select').click(function (e) {
+  var newClass = event.target.innerText;
+  var myPlayer = new Gauntlet.Combatants.Player('name', newClass);
+  console.log('just the var', newClass);
+  console.log('myPlayer', myPlayer);
+  console.log('myPlayer.class', myPlayer.class);
+});
 Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
   this.weapon = newWeapon;
 }
