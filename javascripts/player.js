@@ -3,7 +3,9 @@
  */
 var Gauntlet = Gauntlet || {};
 Gauntlet.Combatants = {};
-
+var newName = '';
+var newClass = '';
+var newWeapon = '';
 /*
   Define the base object for any player of Gauntlet,
   whether a human player or a monster.
@@ -11,17 +13,18 @@ Gauntlet.Combatants = {};
 
 function playerInfoDiv(info) {
   // console.log("this is your friendly neighborhood playerInfoDiv", Gauntlet.myPlayer.health);
-  $('#playerName').html(Gauntlet.myPlayer.playerName);
-  $('#playerHealth').html(Gauntlet.myPlayer.health);
+  $('#playerName').html(Gauntlet.finishPlayer.playerName);
+  $('#playerHealth').html(Gauntlet.finishPlayer.health);
   $('#playerRace').html("Human");
-  $('#playerClass').html(Gauntlet.myPlayer.class);
+  $('#playerClass').html(Gauntlet.finishPlayer.class);
   // $('#playerHealth').html(Gauntlet.Combatants.Player.health);
 }
 
-Gauntlet.Combatants.Player = function(name, playerClass) {
+Gauntlet.Combatants.Player = function(name, playerClass, newWeapon) {
+
   this.species = null;
   this.class = playerClass;
-  this.weapon = null;
+  this.weapon = newWeapon;
 
   this.playerName = name || "unknown adventurer";
   this.health = Math.floor(Math.random() * 40 + 50);
@@ -51,13 +54,29 @@ Gauntlet.Combatants.Player = function(name, playerClass) {
   };
 };
 console.log('player', Gauntlet.Combatants.Player);
-$('#class-select').click(function (e) {
-  var newClass = event.target.innerText;
-  Gauntlet.myPlayer = new Gauntlet.Combatants.Player('name', newClass);
-  console.log('just the var', newClass);
-  console.log('myPlayer', Gauntlet.myPlayer);
-  console.log('myPlayer.class', Gauntlet.myPlayer.class);
+
+$('#player-name').change(function (e) {
+  newName = e.target.value;
+  //var  name = new Gauntlet.Combatants.Player(newName);
+  //console.log('name:', name);
 });
+
+$('.class__link').click(function (e) {
+  newClass = e.target.innerText;
+  //var myPlayer = new Gauntlet.Combatants.Player(newClass);
+  //console.log('just the var', newClass);
+  //console.log('myPlayer', myPlayer);
+  //console.log('myPlayer.class', myPlayer.class);
+});
+
+$('.weapon__link').click(function (e) {
+  newWeapon = e.target.innerText;
+  //var myWeapon = new Gauntlet.Combatants.Player(name, newClass, newWeapon);
+  //console.log('myWeapon.weapon: ', myWeapon.weapon);
+ Gauntlet.finishPlayer = new Gauntlet.Combatants.Player(newName, newClass, newWeapon);
+console.log('player: ', finishPlayer);
+});
+
 Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
   this.weapon = newWeapon;
 }
