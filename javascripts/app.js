@@ -35,10 +35,17 @@ $(document).ready(function() {
     switch (nextCard) {
       case "card--class":
         moveAlong = ($("#player-name").val() !== "");
+        console.log(nextCard);
         break;
       case "card--weapon":
         moveAlong = ($("#player-name").val() !== "");
+        console.log(nextCard);
         break;
+      case "card--battleground":
+        moveAlong = ($("#player-name").val() !== "");
+        console.log(nextCard);
+        break;
+
     }
 
     if (moveAlong) {
