@@ -20,6 +20,11 @@ function playerInfoDiv(info) {
   // $('#playerHealth').html(Gauntlet.Combatants.Player.health);
 }
 
+function enemyInfoDiv(info) {
+  $('#enemyName').html("Bobo");
+  $('#enemyHealth').html(orc.health);
+}
+
 Gauntlet.Combatants.Player = function(name, playerClass, newWeapon) {
 
   this.species = null;
@@ -74,7 +79,7 @@ $('.weapon__link').click(function (e) {
   //var myWeapon = new Gauntlet.Combatants.Player(name, newClass, newWeapon);
   //console.log('myWeapon.weapon: ', myWeapon.weapon);
  Gauntlet.finishPlayer = new Gauntlet.Combatants.Player(newName, newClass, newWeapon);
-console.log('player: ', finishPlayer);
+console.log('player: ', Gauntlet.finishPlayer);
 });
 
 Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
