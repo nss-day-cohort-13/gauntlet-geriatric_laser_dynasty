@@ -125,7 +125,7 @@ Battlefield
 #player {
   border: 2px solid Pink;
   background-color: WhiteSmoke;
-  margin-right: 60%;
+  /*margin-right: 60%;*/
 }
 
 #enemy {
