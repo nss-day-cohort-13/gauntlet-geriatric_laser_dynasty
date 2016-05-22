@@ -10,6 +10,7 @@ var orc = new Gauntlet.Combatants.Orc();
 orc.generateClass();
 orc.setWeapon(new BroadSword());
 console.log(orc.toString());
+console.log("my orc mate", orc);
 
 /*
   Test code to generate a spell
@@ -44,6 +45,7 @@ $(document).ready(function() {
       case "card--battleground":
         moveAlong = ($("#player-name").val() !== "");
         playerInfoDiv();
+        enemyInfoDiv();
         console.log(nextCard);
         break;
 

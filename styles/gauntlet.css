@@ -1,7 +1,12 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Lato", "Helvetica", "sans-serif";
   margin: 0;
-  padding: 10px;
+/*  padding: 10px;*/
   font-size: 3em;
 }
 
@@ -21,7 +26,7 @@ body {
 /*
   Section styles
  */
-.card { 
+.card {
   display: none;
 }
 
@@ -102,4 +107,28 @@ body {
 .btn__text {
   padding: 0 50px 0 20px;
   border-radius: 0 5px 5px 0;
+}
+
+/*********************
+Battlefield
+**********************/
+
+#battleground {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url("blue_battlefield.png") no-repeat fixed center top;
+  background-size: cover;
+  /*padding-bottom: 5px;*/
+}
+
+#player {
+  border: 2px solid Pink;
+  background-color: WhiteSmoke;
+  margin-right: 60%;
+}
+
+#enemy {
+  border: 2px solid Pink;
+  background-color: WhiteSmoke;
 }
