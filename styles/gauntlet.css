@@ -218,7 +218,9 @@ Background Images
   background-image: url("attack_button.png");
   opacity: 0.9;
 }
-
+#playerHealth, #enemyHealth {
+  color: red;
+}
 /*********************
 Animations
 **********************/
