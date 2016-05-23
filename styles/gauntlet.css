@@ -6,7 +6,6 @@ html {
 body {
   font-family: "Lato", "Helvetica", "sans-serif";
   margin: 0;
-/*  padding: 10px;*/
   font-size: 3em;
 }
 
@@ -128,9 +127,6 @@ Battlefield
 
 .row {
   margin: 0%  auto;
-  /*margin-right: -15px;*/
-  /*margin-left: 11%;*/
-  /*margin-top: 8%;*/
 }
 
 #battleground {
@@ -139,7 +135,14 @@ Battlefield
   width: 100%;
   background: url("foggyBattle2.png") no-repeat fixed center top;
   background-size: cover;
-  /*padding-bottom: 5px;*/
+}
+.col-lg-3{
+  margin: 20px;
+}
+
+#statsArea {
+  margin: 0;
+  width: 100%;
 }
 
 #player {
@@ -148,7 +151,6 @@ Battlefield
 
 .attack_button {
   padding: 5px;
-  margin-left: 0%
 }
 
 #player,
@@ -169,7 +171,7 @@ Battlefield
 /*Match Results*/
 
 #youWon {
-  font-size: 2em;
+  font-size: 3em;
   color: blue;
   text-align: center;
 }
