@@ -30,6 +30,10 @@ body {
   display: none;
 }
 
+.typeFace{
+  background-color: whitesmoke;
+}
+
 .card__prompt {
   font-size: 1.1em;
   font-weight: bold;
@@ -147,16 +151,19 @@ Battlefield
   text-decoration: bold underline;
 }
 #youWon {
-  font-size: 2em;
+  font-size: 3em;
   color: blue;
+  text-align: center;
 }
 #youLost {
   font-size: 2em;
   color: Firebrick;
+  text-align: center;
 }
 #missed {
   font-size: 2em;
   color: red;
+  text-align: center;
 }
 /*background view for selection pages*/
 #player-setup {
