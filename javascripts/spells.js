@@ -1,33 +1,40 @@
-/*
-  TODO: Modularize this code with IIFE or Browserify
- */
-var Gauntlet = Gauntlet || {};
-Gauntlet.SpellBook = {};
+var Gauntlet = (function(gauntlet){
 
 
-/*
-  Base spell function that defines name, damage, damage type
- */
-Gauntlet.SpellBook.Spell = function() {
-  this.name = "";
-  this.damage = 0;
+  /*
+    TODO: Modularize this code with IIFE or Browserify
+   */
+  var gauntlet = gauntlet || {};
+  gauntlet.SpellBook = {};
 
-  this.damageTypes = ["lightning", "fire", "water", "earth", "mysticism"];
-  this.type = "";
 
-  this.toString = function() {
-    return this.name + " of " + this.type + " for " + this.damage + " damage!";
-  }
-};
+  /*
+    Base spell function that defines name, damage, damage type
+   */
+  gauntlet.SpellBook.Spell = function() {
+    this.name = "";
+    this.damage = 0;
 
-/*
-  An elemental sphere that can be cast by a magical class
- */
-Gauntlet.SpellBook.Sphere = function() {
-  this.name = "sphere";
-  this.damage = Math.floor(Math.random() * 10 + 10);
+    this.damageTypes = ["lightning", "fire", "water", "earth", "mysticism"];
+    this.type = "";
 
-  var random = Math.round(Math.random() * (this.damageTypes.length - 1));
-  this.type = this.damageTypes[random];
-};
-Gauntlet.SpellBook.Sphere.prototype = new Gauntlet.SpellBook.Spell();
+    this.toString = function() {
+      return this.name + " of " + this.type + " for " + this.damage + " damage!";
+    }
+  };
+
+  /*
+    An elemental sphere that can be cast by a magical class
+   */
+  gauntlet.SpellBook.Sphere = function() {
+    this.name = "sphere";
+    this.damage = Math.floor(Math.random() * 10 + 10);
+
+    var random = Math.round(Math.random() * (this.damageTypes.length - 1));
+    this.type = this.damageTypes[random];
+  };
+  gauntlet.SpellBook.Sphere.prototype = new gauntlet.SpellBook.Spell();
+
+  return gauntlet
+
+}(Gauntlet || {}));

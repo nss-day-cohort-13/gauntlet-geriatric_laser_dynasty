@@ -1,31 +1,36 @@
-var Weapon = function() {
-  this.name = "bare hands";
-  this.damage = 1;
-  this.hands = 2;
+var Gauntlet = (function(gauntlet){
 
-  this.toString = function() {
-    return this.name;
-  }
-};
+  gauntlet.Weapon = function() {
+    this.name = "bare hands";
+    this.damage = 1;
+    this.hands = 2;
 
-var Dagger = function() {
-  this.name = "dagger";
-  this.damage = 4;
-  this.hands = 1;
-};
-Dagger.prototype = new Weapon();
+    this.toString = function() {
+      return this.name;
+    }
+  };
 
-var BroadSword = function() {
-  this.name = "broad sword";
-  this.damage = 14;
-  this.hands = 2;
-};
-BroadSword.prototype = new Weapon();
+  gauntlet.Dagger = function() {
+    this.name = "dagger";
+    this.damage = 4;
+    this.hands = 1;
+  };
+  gauntlet.Dagger.prototype = new gauntlet.Weapon();
 
-var WarAxe = function() {
-  this.name = "war axe";
-  this.damage = 18;
-  this.hands = 2;
-};
-WarAxe.prototype = new Weapon();
+  gauntlet.BroadSword = function() {
+    this.name = "broad sword";
+    this.damage = 14;
+    this.hands = 2;
+  };
+  gauntlet.BroadSword.prototype = new gauntlet.Weapon();
 
+  gauntlet.WarAxe = function() {
+    this.name = "war axe";
+    this.damage = 18;
+    this.hands = 2;
+  };
+  gauntlet.WarAxe.prototype = new gauntlet.Weapon();
+
+  return gauntlet
+
+}(Gauntlet || {}));
