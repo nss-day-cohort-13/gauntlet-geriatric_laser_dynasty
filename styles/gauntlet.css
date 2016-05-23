@@ -30,6 +30,10 @@ body {
   display: none;
 }
 
+.typeFace{
+  background-color: whitesmoke;
+}
+
 .card__prompt {
   font-size: 1.1em;
   font-weight: bold;
@@ -153,6 +157,49 @@ Battlefield
   text-decoration: bold underline;
 }
 
+/*Match Results*/
+
+#youWon {
+  font-size: 3rem;
+  color: blue;
+  text-align: center;
+}
+#youLost {
+  font-size: 2em;
+  color: Firebrick;
+  text-align: center;
+}
+#missed {
+  font-size: 2em;
+  color: red;
+  text-align: center;
+}
+
+/*********************
+Background Images
+**********************/
+
+#player-setup {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url("castle.jpg") no-repeat fixed center top;
+  background-size: cover;
+}
+#class-select{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url("hedgeStone.jpg") no-repeat fixed center top;
+  background-size: cover;
+}
+#weapon-select {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url("smoke.jpg") no-repeat fixed center top;
+  background-size: cover;
+}
 
 /*********************
 Animations
@@ -185,4 +232,3 @@ Animations
 @keyframes play {
    from { background-position: 0px; }
      to { background-position: 900px; }
-}
