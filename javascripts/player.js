@@ -18,7 +18,7 @@ var Gauntlet = (function(gauntlet){
     $('#playerName').html(gauntlet.finishPlayer.playerName);
     $('#playerHealth').html(gauntlet.finishPlayer.health);
     $('#playerRace').html("Human");
-    $('#playerClass').html(gauntlet.finishPlayer.class);
+    $('#playerClass').html(gauntlet.finishPlayer.class.slice(0));
     // $('#playerHealth').html(Gauntlet.Combatants.Player.health);
   }
 
