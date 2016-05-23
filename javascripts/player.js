@@ -30,7 +30,7 @@ Gauntlet.Combatants.Player = function(name, playerClass, newWeapon) {
   this.species = null;
   this.class = playerClass;
   this.weapon = newWeapon;
-
+  this.damage = 20;
   this.playerName = name || "unknown adventurer";
   this.health = Math.floor(Math.random() * 40 + 50);
   this.limbs = ["head", "neck", "arm", "leg", "torso"];
