@@ -29,12 +29,14 @@ var Gauntlet = (function(Gauntlet){
       Gauntlet.orc.weapon.damage = 0;
       $('#youWon').html('You Won!').show();
       $('#attackButton').prop('disabled', false);
+      $('#messages').css("background-color", "lightblue");
       $('#missed').hide();
     } else  if (Gauntlet.finishPlayer.health <= 0) {
       $('#playerHealth').html('0');
       Gauntlet.finishPlayer.damage = 0;
       $('#youLost').html('You were defeated.').show();
       $('#attackButton').prop('disabled', false);
+      $('#messages').css("background-color", "#FFB2B2");
       $('#missed').hide();
       }
   }
