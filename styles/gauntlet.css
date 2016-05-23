@@ -154,7 +154,8 @@ Battlefield
 }
 
 #player,
-#enemy {
+#enemy,
+#messages {
   height: 350px;
   width: 250px;
   border: 2px solid Pink;
@@ -170,19 +171,21 @@ Battlefield
 
 /*Match Results*/
 
+#messages {
+  font-size: 1.5em;
+}
 #youWon {
-  font-size: 3em;
   color: blue;
   text-align: center;
+  text-shadow: 2px 2px 2px black;
 }
 #youLost {
-  font-size: 2em;
-  color: Firebrick;
+  color: red;
   text-align: center;
+  text-shadow: 2px 2px 2px black;
 }
 #missed {
-  font-size: 2em;
-  color: red;
+  color: firebrick;
   text-align: center;
 }
 
