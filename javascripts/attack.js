@@ -19,7 +19,7 @@ function attack(){
    if (enemyDice >= 3) {
      Gauntlet.finishPlayer.health = Gauntlet.finishPlayer.health - orc.weapon.damage;
      }else{
-       $('#missed').html('The moster missed you! Hoorah!')
+       $('#missed').html('The monster missed you! Hoorah!')
      }
   $('#playerHealth').html(Math.abs(Gauntlet.finishPlayer.health));
   $('#enemyHealth').html(Math.abs(orc.health));

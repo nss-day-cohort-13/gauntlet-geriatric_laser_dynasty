@@ -116,7 +116,7 @@ Battlefield
   position: fixed;
   height: 100%;
   width: 100%;
-  background: url("blue_battlefield.png") no-repeat fixed center top;
+  background: url("foggyBattle.jpg") no-repeat fixed center top;
   background-size: cover;
   /*padding-bottom: 5px;*/
 }
@@ -145,4 +145,16 @@ Battlefield
 #enemyStats,
 #playerStats {
   text-decoration: bold underline;
+}
+#youWon {
+  font-size: 2em;
+  color: blue;
+}
+#youLost {
+  font-size: 2em;
+  color: Firebrick;
+}
+#missed {
+  font-size: 2em;
+  color: red;
 }
