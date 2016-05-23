@@ -117,9 +117,10 @@ Battlefield
 **********************/
 
 .row {
-  margin-right: -15px;
-  margin-left: 11%;
-  margin-top: 8%;
+  margin: 0%  auto;
+  /*margin-right: -15px;*/
+  /*margin-left: 11%;*/
+  /*margin-top: 8%;*/
 }
 
 #battleground {
@@ -160,7 +161,7 @@ Battlefield
 /*Match Results*/
 
 #youWon {
-  font-size: 3rem;
+  font-size: 2em;
   color: blue;
   text-align: center;
 }
@@ -232,3 +233,4 @@ Animations
 @keyframes play {
    from { background-position: 0px; }
      to { background-position: 900px; }
+}
