@@ -1,23 +1,23 @@
-var Gauntlet = (function(gauntlet){
+var Gauntlet = (function(Gauntlet){
 
   /*
     Test code to generate a human player and an orc player
   */
-  var warrior = new gauntlet.Combatants.Human();
-  warrior.setWeapon(new gauntlet.WarAxe());
+  var warrior = new Gauntlet.Combatants.Human();
+  warrior.setWeapon(new Gauntlet.WarAxe());
   warrior.generateClass();  // This will be used for "Surprise me" option
   console.log(warrior.toString());
 
-  gauntlet.orc = new gauntlet.Combatants.Orc();
-  gauntlet.orc.generateClass();
-  gauntlet.orc.setWeapon(new gauntlet.BroadSword());
-  console.log(gauntlet.orc.toString());
-  console.log("my orc mate", gauntlet.orc);
+  Gauntlet.orc = new Gauntlet.Combatants.Orc();
+  Gauntlet.orc.generateClass();
+  Gauntlet.orc.setWeapon(new Gauntlet.BroadSword());
+  console.log(Gauntlet.orc.toString());
+  console.log("my orc mate", Gauntlet.orc);
 
   /*
     Test code to generate a spell
    */
-  var spell = new gauntlet.SpellBook.Sphere();
+  var spell = new Gauntlet.SpellBook.Sphere();
   console.log("spell: ", spell.toString());
 
 
@@ -46,8 +46,8 @@ var Gauntlet = (function(gauntlet){
           break;
         case "card--battleground":
           moveAlong = ($("#player-name").val() !== "");
-          gauntlet.playerInfoDiv();
-          gauntlet.enemyInfoDiv();
+          Gauntlet.playerInfoDiv();
+          Gauntlet.enemyInfoDiv();
           console.log(nextCard);
           break;
 
@@ -70,6 +70,6 @@ var Gauntlet = (function(gauntlet){
 
   });
 
-  return gauntlet
+  return Gauntlet
 
 }(Gauntlet || {}));

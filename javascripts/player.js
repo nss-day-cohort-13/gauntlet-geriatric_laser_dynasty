@@ -1,10 +1,10 @@
-var Gauntlet = (function(gauntlet){
+var Gauntlet = (function(Gauntlet){
 
   /*
     Modularize this code with IIFE or Browserify
    */
   var Gauntlet = Gauntlet || {};
-  gauntlet.Combatants = {};
+  Gauntlet.Combatants = {};
   var newName = '';
   var newClass = '';
   var newWeapon = '';
@@ -13,21 +13,25 @@ var Gauntlet = (function(gauntlet){
     whether a human player or a monster.
    */
 
-  gauntlet.playerInfoDiv = function (info) {
+  Gauntlet.playerInfoDiv = function (info) {
     // console.log("this is your friendly neighborhood playerInfoDiv", Gauntlet.myPlayer.health);
-    $('#playerName').html(gauntlet.finishPlayer.playerName);
-    $('#playerHealth').html(gauntlet.finishPlayer.health);
+    $('#playerName').html(Gauntlet.finishPlayer.playerName);
+    $('#playerHealth').html(Gauntlet.finishPlayer.health);
     $('#playerRace').html("Human");
-    $('#playerClass').html(gauntlet.finishPlayer.class.slice(0));
-    // $('#playerHealth').html(Gauntlet.Combatants.Player.health);
+    $('#playerClass').html(Gauntlet.finishPlayer.class.slice(0));
+    console.log("test", Gauntlet.finishPlayer);
+    $('#playerWeapon').html(Gauntlet.finishPlayer.weapon.slice(0));
   }
 
-  gauntlet.enemyInfoDiv = function(info) {
+  Gauntlet.enemyInfoDiv = function(info) {
     $('#enemyName').html("Orc");
-    $('#enemyHealth').html(gauntlet.orc.health);
+    $('#enemyHealth').html(Gauntlet.orc.health);
+    $('#enemyClass').html(Gauntlet.orc.class.name);
+    $('#enemyWeapon').html(Gauntlet.orc.weapon.name);
+    console.log("TESTERASJFPOAJEFPAJEWFIAW", Gauntlet.orc.class.name);
   }
 
-  gauntlet.Combatants.Player = function(name, playerClass, newWeapon) {
+  Gauntlet.Combatants.Player = function(name, playerClass, newWeapon) {
 
     this.species = null;
     this.class = playerClass;
@@ -61,7 +65,7 @@ var Gauntlet = (function(gauntlet){
     };
 
   };
-  console.log('player', gauntlet.Combatants.Player);
+  console.log('player', Gauntlet.Combatants.Player);
 
   $('#player-name').change(function (e) {
     newName = e.target.value;
@@ -81,15 +85,15 @@ var Gauntlet = (function(gauntlet){
     newWeapon = e.target.innerText;
     //var myWeapon = new Gauntlet.Combatants.Player(name, newClass, newWeapon);
     //console.log('myWeapon.weapon: ', myWeapon.weapon);
-   gauntlet.finishPlayer = new gauntlet.Combatants.Player(newName, newClass, newWeapon);
-  console.log('player: ', gauntlet.finishPlayer);
+   Gauntlet.finishPlayer = new Gauntlet.Combatants.Player(newName, newClass, newWeapon);
+  console.log('player: ', Gauntlet.finishPlayer);
   });
 
-  gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
+  Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {
     this.weapon = newWeapon;
   }
 
-  gauntlet.Combatants.Player.prototype.generateClass = function() {
+  Gauntlet.Combatants.Player.prototype.generateClass = function() {
     // Get a random index from the allowed classes array
     var random = Math.round(Math.random() * (this.allowedClasses.length - 1));
 
@@ -97,7 +101,7 @@ var Gauntlet = (function(gauntlet){
     var randomClass = this.allowedClasses[random];
 
     // Composes the corresponding player class into the player object
-    this.class = new gauntlet.GuildHall[randomClass]();
+    this.class = new Gauntlet.GuildHall[randomClass]();
 
     // Add the health bonus
     this.health += this.class.healthBonus;
@@ -108,7 +112,7 @@ var Gauntlet = (function(gauntlet){
     Define the base properties for a human in a
     constructor function.
    */
-  gauntlet.Combatants.Human = function() {
+  Gauntlet.Combatants.Human = function() {
     var randomSkin;
 
     this.species = "Human";
@@ -120,21 +124,21 @@ var Gauntlet = (function(gauntlet){
 
     this.allowedClasses = ["Warrior", "Berserker", "Valkyrie", "Monk"];
   };
-  gauntlet.Combatants.Human.prototype = new gauntlet.Combatants.Player();
+  Gauntlet.Combatants.Human.prototype = new Gauntlet.Combatants.Player();
 
 
   /*
     Define the base properties for a monster in a
     constructor function.
    */
-  gauntlet.Combatants.Monster = function() {
+  Gauntlet.Combatants.Monster = function() {
     this.health = this.health - 30;
     this.intelligence = this.intelligence -20;
     this.strength = this.strength + 30;
   };
 
-  gauntlet.Combatants.Monster.prototype = new gauntlet.Combatants.Player();
+  Gauntlet.Combatants.Monster.prototype = new Gauntlet.Combatants.Player();
 
-  return gauntlet
+  return Gauntlet
 
 }(Gauntlet || {}));
