@@ -21,6 +21,16 @@ body {
   min-width: 500px;
 }
 
+/*Logo Styles*/
+
+#logo {
+  display: block;
+  margin: auto;
+  width: 666px;
+  height: 200px;
+  border-radius: 1em;
+  opacity: 0.7;
+}
 
 
 /*
@@ -134,12 +144,10 @@ Battlefield
 
 #player {
   background-color: WhiteSmoke;
-  /*margin-left: 20%;*/
 }
 
 .attack_button {
   padding: 5px;
-  /*margin-right: 13%;*/
   margin-left: 0%
 }
 
@@ -184,7 +192,7 @@ Background Images
   position: fixed;
   height: 100%;
   width: 100%;
-  background: url("castle.jpg") no-repeat;
+  background: url("brokenCastle.png") no-repeat;
   background-size: cover;
 }
 #class-select{
@@ -198,7 +206,7 @@ Background Images
   position: fixed;
   height: 100%;
   width: 100%;
-  background: url("smoke.png") no-repeat;
+  background: url("foggyforest2.png") no-repeat;
   background-size: cover;
 }
 
@@ -208,6 +216,7 @@ Background Images
   height: 93px;
   width: 260px;
   background-image: url("attack_button.png");
+  opacity: 0.9;
 }
 
 /*********************
