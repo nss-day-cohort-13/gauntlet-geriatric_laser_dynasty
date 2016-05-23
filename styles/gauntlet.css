@@ -146,3 +146,29 @@ Battlefield
 #playerStats {
   text-decoration: bold underline;
 }
+
+
+/*********************
+Animations
+**********************/
+
+#animations {
+  position: fixed;
+  bottom: 5%;
+  width: 100%;
+}
+
+#playerSpriteContainer {
+  width: 300px;
+  height: 300px;
+  display: block;
+  background-image: url("http://res.cloudinary.com/jessicasa/image/upload/v1464016838/oldmanspritesheet_pxdh9p.png");
+  animation: play .6s steps(3) infinite;
+}
+
+
+
+@keyframes play {
+   from { background-position:    0px; }
+     to { background-position: 900px; }
+}
