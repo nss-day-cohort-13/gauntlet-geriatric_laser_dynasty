@@ -220,6 +220,12 @@ Background Images
   background-image: url("attack_button.png");
   opacity: 0.9;
 }
+
+#attackButton:hover{
+  border: 2px solid WhiteSmoke;
+  opacity: 1;
+}
+
 #playerHealth, #enemyHealth {
   color: red;
 }
