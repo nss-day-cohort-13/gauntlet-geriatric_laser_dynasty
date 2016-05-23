@@ -18,8 +18,8 @@ var Gauntlet = (function(Gauntlet){
     $('#playerName').html("Name: " + Gauntlet.finishPlayer.playerName);
     $('#playerHealth').html("Health: "+ Gauntlet.finishPlayer.health);
     $('#playerRace').html("Race: Human");
+    console.log("playerClass", Gauntlet.finishPlayer.class);
     $('#playerClass').html("Class: " + Gauntlet.finishPlayer.class);
-    console.log("playerWeapon", Gauntlet.finishPlayer.weapon);
     $('#playerWeapon').html("Weapon: " + Gauntlet.finishPlayer.weapon);
   }
 
@@ -69,24 +69,15 @@ var Gauntlet = (function(Gauntlet){
 
   $('#player-name').change(function (e) {
     newName = e.target.value;
-    //var  name = new Gauntlet.Combatants.Player(newName);
-    //console.log('name:', name);
   });
 
   $('.class__link').click(function (e) {
-    newClass = e.target.innerText;
-    //var myPlayer = new Gauntlet.Combatants.Player(newClass);
-    //console.log('just the var', newClass);
-    //console.log('myPlayer', myPlayer);
-    //console.log('myPlayer.class', myPlayer.class);
+    newClass = $(e.target).parent().find(".btn__text")[0].innerText;
   });
 
   $('.weapon__link').click(function (e) {
-    newWeapon = e.target.innerText;
-    //var myWeapon = new Gauntlet.Combatants.Player(name, newClass, newWeapon);
-    //console.log('myWeapon.weapon: ', myWeapon.weapon);
-   Gauntlet.finishPlayer = new Gauntlet.Combatants.Player(newName, newClass, newWeapon);
-  console.log('player: ', Gauntlet.finishPlayer);
+    newWeapon = $(e.target).parent().find(".btn__text")[0].innerText;
+    Gauntlet.finishPlayer = new Gauntlet.Combatants.Player(newName, newClass, newWeapon);
   });
 
   Gauntlet.Combatants.Player.prototype.setWeapon = function(newWeapon) {

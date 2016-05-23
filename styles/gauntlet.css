@@ -134,12 +134,12 @@ Battlefield
 
 #player {
   background-color: WhiteSmoke;
-  margin-left: 20%;
+  /*margin-left: 20%;*/
 }
 
 .attack_button {
   padding: 5px;
-  margin-right: 13%;
+  /*margin-right: 13%;*/
   margin-left: 0%
 }
 
