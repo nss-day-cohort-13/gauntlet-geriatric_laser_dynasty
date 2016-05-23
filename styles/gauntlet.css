@@ -72,6 +72,7 @@ body {
   font-weight: 600;
   padding: 10px 5px;
   min-width: 260px;
+  opacity: 0.8;
 }
 
 .btn--orange {
@@ -83,7 +84,7 @@ body {
 .btn--blue {
   border-color: #0074D9;
   color: white;
-  background-color: #0074D9;
+  background-color: #009989;
 }
 
 .btn--yellow {
@@ -145,10 +146,6 @@ Battlefield
   width: 100%;
 }
 
-#player {
-  background-color: WhiteSmoke;
-}
-
 .attack_button {
   padding: 5px;
 }
@@ -157,15 +154,10 @@ Battlefield
 #enemy {
   height: 350px;
   width: 250px;
-  border: 2px solid Pink;
+  border: 3px solid #009989;
   background-color: WhiteSmoke;
   opacity: 0.6;
   border-radius: 1em;
-}
-
-#enemyStats,
-#playerStats {
-  text-decoration: bold underline;
 }
 
 /*Match Results*/
