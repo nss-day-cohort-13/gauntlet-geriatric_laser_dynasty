@@ -192,9 +192,9 @@
 
     <section id="battleground" class="card card--battleground">
 
-      <div class="container">
+      <div class="container" id="statsArea">
         <div class="row">
-          <article class="col-lg-4" id="player">
+          <article class="col-lg-3" id="player">
             <p id"playerStats">Player Stats</p>
             <p id="playerName"></p>
             <p id="playerHealth"></p>
@@ -206,16 +206,7 @@
             </section>
           </article>
 
-          <div class="col-lg-4 card__button attack_button">
-            <a id="attackButton" class="card__link btn btn--big"
-            href="#"
-            next="">
-            <span class="btn__prompt"></span>
-            <span class="btn__text"></span>
-            </a>
-          </div>
-
-          <article class="col-lg-4" id="enemy">
+          <article class="col-lg-3" id="enemy">
           <p id="enemyStats">Enemy Stats</p>
            <p id="enemyName"></p>
            <p id="enemyHealth"></p>
@@ -229,26 +220,34 @@
               <p id="enemyWeapon"></p>
             </section>
           </article>
+
+          <div class="col-lg-3 card__button attack_button">
+            <a id="attackButton" class="card__link btn btn--big"
+            href="#"
+            next="">
+            <span class="btn__prompt"></span>
+            <span class="btn__text"></span>
+            </a>
+          </div>
+          <div class='container col-lg-3' id="gameMessages">
+            <div class='row'>
+              <article id='youWon'>
+                <h1></h1>
+                </article>
+              <article id='youLost'>
+                  <h1></h1>
+              </article>
+              <article id='missed'>
+                <h1></h1>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
 
       <div id="animations">
         <div id=playerSpriteContainer></div>
         <div id=enemySpriteContainer></div>
-      </div>
-
-      <div class='container'>
-        <div class='row'>
-          <article id='youWon'>
-            <h1></h1>
-            </article>
-          <article id='youLost'>
-              <h1></h1>
-          </article>
-          <article id='missed'>
-            <h1></h1>
-          </article>
-        </div>
       </div>
     </section>
 
