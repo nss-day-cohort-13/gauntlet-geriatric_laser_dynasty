@@ -183,21 +183,21 @@ Background Images
   position: fixed;
   height: 100%;
   width: 100%;
-  background: url("castle.jpg") no-repeat fixed center top;
+  background: url("castle.jpg") no-repeat;
   background-size: cover;
 }
 #class-select{
   position: fixed;
   height: 100%;
   width: 100%;
-  background: url("hedgeStone.png") no-repeat fixed center top;
+  background: url("hedgeStone.png") no-repeat;
   background-size: cover;
 }
 #weapon-select {
   position: fixed;
   height: 100%;
   width: 100%;
-  background: url("smoke.png") no-repeat fixed center top;
+  background: url("smoke.png") no-repeat;
   background-size: cover;
 }
 
