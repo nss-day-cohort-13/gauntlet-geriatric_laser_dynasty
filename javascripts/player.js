@@ -59,6 +59,7 @@ var Gauntlet = (function(gauntlet){
       console.log('the output', output);
       return output;
     };
+
   };
   console.log('player', gauntlet.Combatants.Player);
 

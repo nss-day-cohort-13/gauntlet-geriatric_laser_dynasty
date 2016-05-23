@@ -56,7 +56,6 @@ body {
   display: inline-block;
   margin: 10px;
   font-size: 18px;
-  text-transform: uppercase;
   font-weight: 600;
   padding: 10px 5px;
   min-width: 260px;
@@ -123,12 +122,27 @@ Battlefield
 }
 
 #player {
-  border: 2px solid Pink;
   background-color: WhiteSmoke;
-  /*margin-right: 60%;*/
+  margin-left: 20%;
 }
 
+.attack_button {
+  padding: 5px;
+  margin-right: 13%;
+  margin-left: 5%
+}
+
+#player,
 #enemy {
+  height: 350px;
+  width: 250px;
   border: 2px solid Pink;
   background-color: WhiteSmoke;
+  opacity: 0.6;
+  border-radius: 1em;
+}
+
+#enemyStats,
+#playerStats {
+  text-decoration: bold underline;
 }
