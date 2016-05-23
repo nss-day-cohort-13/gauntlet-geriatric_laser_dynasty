@@ -158,3 +158,25 @@ Battlefield
   font-size: 2em;
   color: red;
 }
+/*background view for selection pages*/
+#player-setup {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url("castle.jpg") no-repeat fixed center top;
+  background-size: cover;
+}
+#class-select{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url("hedgeStone.jpg") no-repeat fixed center top;
+  background-size: cover;
+}
+#weapon-select {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url("smoke.jpg") no-repeat fixed center top;
+  background-size: cover;
+}
