@@ -112,6 +112,12 @@ body {
 Battlefield
 **********************/
 
+.row {
+  margin-right: -15px;
+  margin-left: 11%;
+  margin-top: 8%;
+}
+
 #battleground {
   position: fixed;
   height: 100%;
@@ -129,7 +135,7 @@ Battlefield
 .attack_button {
   padding: 5px;
   margin-right: 13%;
-  margin-left: 5%
+  margin-left: 0%
 }
 
 #player,
@@ -154,7 +160,7 @@ Animations
 
 #animations {
   position: fixed;
-  bottom: 5%;
+  bottom: 11%;
   left: 40%;
   width: 100%;
 }
@@ -177,6 +183,6 @@ Animations
 
 
 @keyframes play {
-   from { background-position:    0px; }
+   from { background-position: 0px; }
      to { background-position: 900px; }
 }
