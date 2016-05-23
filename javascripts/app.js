@@ -28,6 +28,13 @@ var Gauntlet = (function(Gauntlet){
      */
     $("#player-setup").show();
 
+    $("#player-name").keyup(function(event){
+    if(event.keyCode === 13){
+        $("#enterKey").click();
+    }
+});
+
+
     /*
       When any button with card__link class is clicked,
       move on to the next view.
