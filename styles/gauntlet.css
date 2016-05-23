@@ -116,7 +116,7 @@ Battlefield
   position: fixed;
   height: 100%;
   width: 100%;
-  background: url("blue_battlefield.png") no-repeat fixed center top;
+  background: url("foggyBattle2.png") no-repeat fixed center top;
   background-size: cover;
   /*padding-bottom: 5px;*/
 }
@@ -155,14 +155,22 @@ Animations
 #animations {
   position: fixed;
   bottom: 5%;
+  left: 40%;
   width: 100%;
 }
 
 #playerSpriteContainer {
   width: 300px;
   height: 300px;
-  display: block;
+  display: inline-block;
   background-image: url("http://res.cloudinary.com/jessicasa/image/upload/v1464016838/oldmanspritesheet_pxdh9p.png");
+  animation: play .6s steps(3) infinite;
+}
+#enemySpriteContainer {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  background-image: url("http://res.cloudinary.com/ddos6irdv/image/upload/v1464017329/enemyspritesheet_yyqe8p.png");
   animation: play .6s steps(3) infinite;
 }
 
