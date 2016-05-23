@@ -190,15 +190,23 @@ Background Images
   position: fixed;
   height: 100%;
   width: 100%;
-  background: url("hedgeStone.jpg") no-repeat fixed center top;
+  background: url("hedgeStone.png") no-repeat fixed center top;
   background-size: cover;
 }
 #weapon-select {
   position: fixed;
   height: 100%;
   width: 100%;
-  background: url("smoke.jpg") no-repeat fixed center top;
+  background: url("smoke.png") no-repeat fixed center top;
   background-size: cover;
+}
+
+#attackButton {
+  border-radius: 1em;
+  box-shadow: 3px 3px 3px DarkGrey;
+  height: 93px;
+  width: 260px;
+  background-image: url("attack_button.png");
 }
 
 /*********************
