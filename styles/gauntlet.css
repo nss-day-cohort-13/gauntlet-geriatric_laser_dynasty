@@ -30,6 +30,10 @@ body {
   display: none;
 }
 
+.typeFace{
+  background-color: whitesmoke;
+}
+
 .card__prompt {
   font-size: 1.1em;
   font-weight: bold;
@@ -112,11 +116,18 @@ body {
 Battlefield
 **********************/
 
+.row {
+  margin: 0%  auto;
+  /*margin-right: -15px;*/
+  /*margin-left: 11%;*/
+  /*margin-top: 8%;*/
+}
+
 #battleground {
   position: fixed;
   height: 100%;
   width: 100%;
-  background: url("blue_battlefield.png") no-repeat fixed center top;
+  background: url("foggyBattle2.png") no-repeat fixed center top;
   background-size: cover;
   /*padding-bottom: 5px;*/
 }
@@ -129,7 +140,7 @@ Battlefield
 .attack_button {
   padding: 5px;
   margin-right: 13%;
-  margin-left: 5%
+  margin-left: 0%
 }
 
 #player,
@@ -145,4 +156,81 @@ Battlefield
 #enemyStats,
 #playerStats {
   text-decoration: bold underline;
+}
+
+/*Match Results*/
+
+#youWon {
+  font-size: 2em;
+  color: blue;
+  text-align: center;
+}
+#youLost {
+  font-size: 2em;
+  color: Firebrick;
+  text-align: center;
+}
+#missed {
+  font-size: 2em;
+  color: red;
+  text-align: center;
+}
+
+/*********************
+Background Images
+**********************/
+
+#player-setup {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url("castle.jpg") no-repeat fixed center top;
+  background-size: cover;
+}
+#class-select{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url("hedgeStone.jpg") no-repeat fixed center top;
+  background-size: cover;
+}
+#weapon-select {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: url("smoke.jpg") no-repeat fixed center top;
+  background-size: cover;
+}
+
+/*********************
+Animations
+**********************/
+
+#animations {
+  position: fixed;
+  bottom: 11%;
+  left: 40%;
+  width: 100%;
+}
+
+#playerSpriteContainer {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  background-image: url("http://res.cloudinary.com/jessicasa/image/upload/v1464016838/oldmanspritesheet_pxdh9p.png");
+  animation: play .6s steps(3) infinite;
+}
+#enemySpriteContainer {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  background-image: url("http://res.cloudinary.com/ddos6irdv/image/upload/v1464017329/enemyspritesheet_yyqe8p.png");
+  animation: play .6s steps(3) infinite;
+}
+
+
+
+@keyframes play {
+   from { background-position: 0px; }
+     to { background-position: 900px; }
 }

@@ -15,7 +15,7 @@
 
     <section id="player-setup" class="card card--name">
       <div class="card__prompt">
-        <div>RECORD YOUR NAME, ADVENTURER</div>
+        <div class=typeFace>RECORD YOUR NAME, ADVENTURER</div>
         <div class="field">
           <input type="text" autofocus="true" id="player-name" class="field__textinput">
         </div>
@@ -33,7 +33,7 @@
 
     <section id="class-select" class="card card--class">
       <div class="card__prompt">
-        <div>CHOOSE YOUR PATH</div>
+        <div class=typeFace>CHOOSE YOUR PATH</div>
         <div>
           <a class="card__back btn btn--small"
              href="#"
@@ -49,14 +49,14 @@
           <div class="col-sm-4">
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue" href="#">
-                <span class="btn__prompt"></span>
+                <span class="btn__prompt">></span>
                 <span class="btn__text">Warrior</span>
               </a>
             </div>
 
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue" href="#">
-                <span class="btn__prompt"></span>
+                <span class="btn__prompt">></span>
                 <span class="btn__text">Valkyrie</span>
               </a>
             </div>
@@ -70,7 +70,7 @@
 
             <div class="card__button">
               <a class="class__link btn btn--big btn--blue" href="#">
-                <span class="btn__prompt"></span>
+                <span class="btn__prompt">></span>
                 <span class="btn__text">Monk</span>
               </a>
             </div>
@@ -142,7 +142,7 @@
 
     <section id="weapon-select" class="card card--weapon">
       <div class="card__prompt">
-        <div>choose your weapon</div>
+        <div class=typeFace>choose your weapon</div>
         <div>
           <a class="card__back btn btn--small"
              href="#"
@@ -215,9 +215,12 @@
           </div>
 
           <article class="col-lg-4" id="enemy">
-          <p id"enemyStats">Enemy Stats</p>
+          <p id="enemyStats">Enemy Stats</p>
            <p id="enemyName"></p>
            <p id="enemyHealth"></p>
+           <p id="enemyRace"></p>
+           <p id="enemyClass"></p>
+           <p id="enemyWeapon"></p>
             <section>
               <p id="enemyRace"></p>
               <p id="enemyClass"></p>
@@ -227,13 +230,19 @@
           </article>
         </div>
       </div>
+
+      <div id="animations">
+        <div id=playerSpriteContainer></div>
+        <div id=enemySpriteContainer></div>
+      </div>
+
       <div class='container'>
         <div class='row'>
           <article id='youWon'>
-            <h1>You Won !</h1>
+            <h1></h1>
             </article>
           <article id='youLost'>
-              <h1>You were defeated. :(</h1>
+              <h1></h1>
           </article>
           <article id='missed'>
             <h1></h1>
