@@ -13,16 +13,16 @@ var newWeapon = '';
 
 function playerInfoDiv(info) {
   // console.log("this is your friendly neighborhood playerInfoDiv", Gauntlet.myPlayer.health);
-  $('#playerName').html(Gauntlet.finishPlayer.playerName);
-  $('#playerHealth').html(Gauntlet.finishPlayer.health);
-  $('#playerRace').html("Human");
-  $('#playerClass').html(Gauntlet.finishPlayer.class);
+  $('#playerName').html(`Name: ` + Gauntlet.finishPlayer.playerName);
+  $('#playerHealth').html(`Health: ` + Gauntlet.finishPlayer.health);
+  $('#playerRace').html("Race: Human");
+  $('#playerClass').html(`Class: ` + Gauntlet.finishPlayer.class);
   // $('#playerHealth').html(Gauntlet.Combatants.Player.health);
 }
 
 function enemyInfoDiv(info) {
-  $('#enemyName').html("Bobo");
-  $('#enemyHealth').html(orc.health);
+  $('#enemyName').html("Name: Bobo");
+  $('#enemyHealth').html(`Health: ` + orc.health);
 }
 
 Gauntlet.Combatants.Player = function(name, playerClass, newWeapon) {
