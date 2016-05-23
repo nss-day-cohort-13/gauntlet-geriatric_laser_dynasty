@@ -10,6 +10,7 @@ var Gauntlet = (function(Gauntlet){
 
   Gauntlet.orc = new Gauntlet.Combatants.Orc();
   Gauntlet.orc.generateClass();
+  Gauntlet.orc.generateName();
   Gauntlet.orc.setWeapon(new Gauntlet.BroadSword());
   console.log(Gauntlet.orc.toString());
   console.log("my orc mate", Gauntlet.orc);

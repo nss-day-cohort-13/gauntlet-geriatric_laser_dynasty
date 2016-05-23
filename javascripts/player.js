@@ -15,20 +15,20 @@ var Gauntlet = (function(Gauntlet){
 
   Gauntlet.playerInfoDiv = function (info) {
     // console.log("this is your friendly neighborhood playerInfoDiv", Gauntlet.myPlayer.health);
-    $('#playerName').html(Gauntlet.finishPlayer.playerName);
-    $('#playerHealth').html(Gauntlet.finishPlayer.health);
-    $('#playerRace').html("Human");
-    $('#playerClass').html(Gauntlet.finishPlayer.class.slice(0));
-    console.log("test", Gauntlet.finishPlayer);
-    $('#playerWeapon').html(Gauntlet.finishPlayer.weapon.slice(0));
+    $('#playerName').html("Name: " + Gauntlet.finishPlayer.playerName);
+    $('#playerHealth').html("Health: "+ Gauntlet.finishPlayer.health);
+    $('#playerRace').html("Race: Human");
+    $('#playerClass').html("Class: " + Gauntlet.finishPlayer.class);
+    console.log("playerWeapon", Gauntlet.finishPlayer.weapon);
+    $('#playerWeapon').html("Weapon: " + Gauntlet.finishPlayer.weapon);
   }
 
   Gauntlet.enemyInfoDiv = function(info) {
-    $('#enemyName').html("Orc");
-    $('#enemyHealth').html(Gauntlet.orc.health);
-    $('#enemyClass').html(Gauntlet.orc.class.name);
-    $('#enemyWeapon').html(Gauntlet.orc.weapon.name);
-    console.log("TESTERASJFPOAJEFPAJEWFIAW", Gauntlet.orc.class.name);
+    $('#enemyName').html("Name: " + Gauntlet.orc.name);
+    $('#enemyHealth').html("Health: " + Gauntlet.orc.health);
+    $('#enemyRace').html("Race: Orc");
+    $('#enemyClass').html("Class: " + Gauntlet.orc.class.name);
+    $('#enemyWeapon').html("Weapon: " + Gauntlet.orc.weapon.name);
   }
 
   Gauntlet.Combatants.Player = function(name, playerClass, newWeapon) {
