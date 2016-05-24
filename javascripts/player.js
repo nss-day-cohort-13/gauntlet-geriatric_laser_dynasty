@@ -72,7 +72,14 @@ var Gauntlet = (function(Gauntlet){
   });
 
   $('.class__link').click(function (e) {
+    if ($(e.target).parent().find(".btn__text")[0].innerText === "surprise me") {
+      var classArray = ["Warrior", "Valkyrie", "Berserker", "Monk", "Wizard", "Sorcerer", "Conjurer", "Thief", "Ninja", "Assassin"];
+      var randomNumber = Math.round(Math.random() * (classArray.length - 1));
+      console.log("randomclass", classArray[randomNumber]);
+      newClass = classArray[randomNumber];
+    } else {
     newClass = $(e.target).parent().find(".btn__text")[0].innerText;
+    }
   });
 
   $('.weapon__link').click(function (e) {
